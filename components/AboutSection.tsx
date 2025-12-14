@@ -27,9 +27,11 @@ const AboutSection: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
         
         {/* Left Column: Text Content */}
-        <div className="p-6 md:p-12 lg:p-24 border-b lg:border-b-0 lg:border-r border-black">
-          <div className="inline-block bg-black text-brand-yellow px-2 py-1 text-xs font-bold uppercase tracking-widest mb-6">
-            01. Profile
+        <div className="p-6 md:p-12 lg:p-24 border-b lg:border-b-0 lg:border-r border-black flex flex-col items-start">
+          <div className="w-full flex justify-between items-start mb-8">
+            <div className="inline-block bg-black text-brand-yellow px-2 py-1 text-xs font-bold uppercase tracking-widest">
+              01. Profile
+            </div>
           </div>
           
           <h2 className="font-serif text-5xl md:text-6xl mb-8 leading-[0.9] tracking-tight">
@@ -79,9 +81,9 @@ const AboutSection: React.FC = () => {
 
           <button 
             onClick={() => setIsExpanded(!isExpanded)}
-            className="mt-8 flex items-center gap-3 text-xs font-bold tracking-widest uppercase border border-black px-4 py-3 hover:bg-black hover:text-white transition-all group w-full justify-between"
+            className="mt-8 flex items-center gap-3 text-xs font-bold tracking-widest uppercase border border-black px-6 py-3 hover:bg-black hover:text-white transition-all group w-fit"
           >
-            <span>{isExpanded ? 'Collapse Information' : 'Expand Information'}</span>
+            <span>{isExpanded ? '접기' : '더보기'}</span>
             {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           </button>
         </div>
